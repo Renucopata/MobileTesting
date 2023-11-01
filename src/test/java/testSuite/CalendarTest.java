@@ -1,6 +1,6 @@
 package testSuite;
 
-import activities.calculator.MainCalendar;
+import activities.calendar.MainCalendar;
 import control.Label;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -20,9 +20,9 @@ public class CalendarTest {
         mainCalendar.eventTitle.setText(EVENT_NAME);
 
         mainCalendar.saveEvent.click();
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
         mainCalendar.okButton.click();
-        Thread.sleep(5000);
+        //Thread.sleep(5000);
         String expectedResult = EVENT_NAME;
         mainCalendar.searchButton.click();
         mainCalendar.searchBox.setText(EVENT_NAME);

@@ -1,4 +1,4 @@
-package activities.calculator;
+package activities.calendar;
 
 import control.Button;
 import control.Label;

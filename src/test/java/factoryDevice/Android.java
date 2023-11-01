@@ -12,10 +12,10 @@ public class Android implements IDevice{
     @Override
     public AppiumDriver create() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName","QAPRueba1");
+        capabilities.setCapability("deviceName","QADevice");
         capabilities.setCapability("platformVersion","11.0");
-        capabilities.setCapability("appPackage","com.simplemobiletools.calendar");
-        capabilities.setCapability("appActivity","com.simplemobiletools.calendar.activities.MainActivity");
+        capabilities.setCapability("appPackage","com.gs.stickit");
+        capabilities.setCapability("appActivity","com.gs.stickit.NoteItActivity");
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("automationName","uiautomator2");
 
@@ -25,7 +25,7 @@ public class Android implements IDevice{
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-        device.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        device.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
         return device;
     }
 }
